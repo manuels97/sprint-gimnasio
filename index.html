@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sprint Gimnasio — El mejor ambiente. Entrenamiento serio.</title>
+  <meta name="description" content="Sprint Gimnasio en Belgrano. Entrenamiento profesional para todos los niveles. Musculación, Pilates Reformer, Alto Rendimiento, Aeróbico y Nutrición." />
+  <meta property="og:title" content="Sprint Gimnasio" />
+  <meta property="og:description" content="El mejor ambiente. Entrenamiento serio." />
+  <meta property="og:image" content="og-placeholder.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23dc2626'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Arial Black' font-size='18' fill='white'>S</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar navbar--hidden" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#inicio" class="navbar__logo">
+        <img src="assets/logosprint.png" alt="Sprint Gimnasio" class="navbar__logo-img" />
+      </a>
+
+      <nav class="navbar__links" id="navLinks" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--red navbar__cta navbar__cta--pulse" target="_blank" rel="noopener">Consultá ahora</a>
+
+      <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="mobile-menu__close" id="menuClose" aria-label="Cerrar menú">
+      <i data-lucide="x"></i>
+    </button>
+    <nav class="mobile-menu__links">
+      <a href="#inicio" class="mobile-link">Inicio</a>
+      <a href="#servicios" class="mobile-link">Servicios</a>
+      <a href="#horarios" class="mobile-link">Horarios</a>
+      <a href="#galeria" class="mobile-link">Galería</a>
+      <a href="#contacto" class="mobile-link">Contacto</a>
+    </nav>
+    <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--red mobile-menu__cta" target="_blank" rel="noopener">Consultá ahora</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+      <!-- Fondo: video -->
+      <div class="hero__img-wrap">
+        <video class="hero__video" autoplay muted loop playsinline>
+          <source src="assets/herovid1.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="container hero__inner">
+
+        <!-- LEFT: texto -->
+        <div class="hero__left">
+          <div class="hero__badge hero-reveal" style="--delay:0.75s">GIMNASIO SPRINT</div>
+          <h1 class="hero__title hero-reveal" style="--delay:1s">
+            EL MEJOR AMBIENTE.<br />ENTRENAMIENTO SERIO.
+          </h1>
+          <p class="hero__subtitle hero-reveal" style="--delay:0.65s">
+            Un equipo profesional que entrena deportistas de alto rendimiento, y te atiende como a uno más. Desde el primer día.
+          </p>
+          <div class="hero__actions hero-reveal" style="--delay:0.8s">
+            <a href="#servicios" class="btn btn--red">Conocé el gym</a>
+            <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--outline" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: stats flotantes -->
+        <div class="hero__right hero-reveal" style="--delay:0.95s">
+          <div class="hero__stats">
+            <div class="stat stat--location">
+              <i data-lucide="map-pin" class="stat__pin-icon"></i>
+              <span class="stat__label">Belgrano R, Vidal 1779</span>
+            </div>
+            <div class="stat">
+              <span class="stat__label">30+ años de experiencia</span>
+            </div>
+            <div class="stat">
+              <span class="stat__label">500+ socios activos</span>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TICKER BAND -->
+    <div class="ticker-band" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-item">
+          <img src="assets/logosprint.png" alt="" class="ticker-logo" />
+        </div>
+        <div class="ticker-item">
+          <i data-lucide="map-pin"></i>
+          <span>Vidal 1779</span>
+        </div>
+        <div class="ticker-item">
+          <i data-lucide="zap"></i>
+          <span>400M² DE ESPACIO</span>
+        </div>
+        <div class="ticker-item">
+          <img src="assets/logosprint.png" alt="" class="ticker-logo" />
+        </div>
+        <div class="ticker-item">
+          <i data-lucide="map-pin"></i>
+          <span>Vidal 1779</span>
+        </div>
+        <div class="ticker-item">
+          <i data-lucide="zap"></i>
+          <span>400M² DE ESPACIO</span>
+        </div>
+        <!-- duplicate for seamless loop -->
+        <div class="ticker-item">
+          <img src="assets/logosprint.png" alt="" class="ticker-logo" />
+        </div>
+        <div class="ticker-item">
+          <i data-lucide="map-pin"></i>
+          <span>Vidal 1779</span>
+        </div>
+        <div class="ticker-item">
+          <i data-lucide="zap"></i>
+          <span>400M² DE ESPACIO</span>
+        </div>
+        <div class="ticker-item">
+          <img src="assets/logosprint.png" alt="" class="ticker-logo" />
+        </div>
+        <div class="ticker-item">
+          <i data-lucide="map-pin"></i>
+          <span>Vidal 1779</span>
+        </div>
+        <div class="ticker-item">
+          <i data-lucide="zap"></i>
+          <span>400M² DE ESPACIO</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICIOS -->
+    <section class="section services-section" id="servicios">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <p class="services-section__eyebrow">LO QUE OFRECEMOS</p>
+          <h2 class="section__title">NUESTROS SERVICIOS</h2>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card animate-on-scroll">
+            <span class="service-card__num">01</span>
+            <div class="service-card__icon-wrap">
+              <i data-lucide="dumbbell"></i>
+            </div>
+            <h3 class="service-card__title">Musculación</h3>
+            <p class="service-card__desc">Equipamiento profesional y rutinas armadas a tu nivel para alcanzar tus objetivos.</p>
+            <div class="service-card__actions">
+              <a href="musculacion.html" class="service-card__cta">
+                Ver más <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20info%20sobre%20Musculaci%C3%B3n" class="service-card__cta service-card__cta--wa" target="_blank" rel="noopener">
+                Consultá ahora <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <span class="service-card__num">02</span>
+            <div class="service-card__icon-wrap">
+              <i data-lucide="user-check"></i>
+            </div>
+            <h3 class="service-card__title">Pilates Reformer</h3>
+            <p class="service-card__desc">Clases personalizadas en máquinas profesionales. Ideal para rehabilitación y tono muscular.</p>
+            <div class="service-card__actions">
+              <a href="pilates-reformer.html" class="service-card__cta">
+                Ver más <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20info%20sobre%20Pilates%20Reformer" class="service-card__cta service-card__cta--wa" target="_blank" rel="noopener">
+                Consultá ahora <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <span class="service-card__num">03</span>
+            <div class="service-card__icon-wrap">
+              <i data-lucide="trophy"></i>
+            </div>
+            <h3 class="service-card__title">Alto Rendimiento</h3>
+            <p class="service-card__desc">Preparación física periodizada para deportistas que entrenan para competir.</p>
+            <div class="service-card__actions">
+              <a href="alto-rendimiento.html" class="service-card__cta">
+                Ver más <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20info%20sobre%20Alto%20Rendimiento" class="service-card__cta service-card__cta--wa" target="_blank" rel="noopener">
+                Consultá ahora <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <span class="service-card__num">04</span>
+            <div class="service-card__icon-wrap">
+              <i data-lucide="activity"></i>
+            </div>
+            <h3 class="service-card__title">Aeróbico</h3>
+            <p class="service-card__desc">Clases grupales de alta energía para todos los niveles. Cardio, ritmo y comunidad.</p>
+            <div class="service-card__actions">
+              <a href="aerobico.html" class="service-card__cta">
+                Ver más <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20info%20sobre%20Aer%C3%B3bico" class="service-card__cta service-card__cta--wa" target="_blank" rel="noopener">
+                Consultá ahora <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <span class="service-card__num">05</span>
+            <div class="service-card__icon-wrap">
+              <i data-lucide="apple"></i>
+            </div>
+            <h3 class="service-card__title">Nutrición</h3>
+            <p class="service-card__desc">Plan alimentario personalizado para potenciar tus resultados dentro y fuera del gym.</p>
+            <div class="service-card__actions">
+              <a href="nutricion.html" class="service-card__cta">
+                Ver más <i data-lucide="arrow-right"></i>
+              </a>
+              <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20info%20sobre%20Nutrici%C3%B3n" class="service-card__cta service-card__cta--wa" target="_blank" rel="noopener">
+                Consultá ahora <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section nosotros" id="nosotros">
+      <div class="container nosotros__inner">
+        <div class="nosotros__text animate-on-scroll">
+          <h2 class="section__title">MÁS QUE UN GIMNASIO.</h2>
+          <p class="nosotros__body">
+            En Sprint Gimnasio entrena gente de todos los niveles, con objetivos muy distintos. Lo que nos hace diferentes es la atención: un equipo de profesores que se forma constantemente, que conoce a cada socio por su nombre, y que se toma en serio tanto al que recién empieza como al que entrena para competir. Acá no hay clientes de paso. Hay gente que entrena, y comunidad que vuelve.
+          </p>
+        </div>
+        <div class="nosotros__media animate-on-scroll" aria-hidden="true">
+          <div class="nosotros__placeholder">
+            <span class="nosotros__word">SPRINT</span>
+            <div class="nosotros__overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORARIOS -->
+    <section class="section" id="horarios">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">HORARIOS DE ATENCIÓN</h2>
+          <p class="section__subtitle">Estamos abiertos de lunes a sábados.</p>
+        </div>
+
+        <div class="horarios-3-grid animate-on-scroll">
+          <div class="horario-3-card">
+            <div class="horario-3-card__day">
+              <i data-lucide="calendar"></i>
+              <span>Lunes</span>
+            </div>
+            <div class="horario-3-card__time">6:30 — 23:30</div>
+          </div>
+          <div class="horario-3-card">
+            <div class="horario-3-card__day">
+              <i data-lucide="calendar"></i>
+              <span>Martes a Viernes</span>
+            </div>
+            <div class="horario-3-card__time">6:30 — 22:30</div>
+          </div>
+          <div class="horario-3-card">
+            <div class="horario-3-card__day">
+              <i data-lucide="calendar"></i>
+              <span>Sábados</span>
+            </div>
+            <div class="horario-3-card__time">9:00 — 19:00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">EL GIMNASIO POR DENTRO</h2>
+          <p class="section__subtitle">Equipamiento profesional, espacios amplios, ambiente real.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item animate-on-scroll">
+            <img src="assets/galeria/WhatsApp Image 2026-05-15 at 10.48.44.jpeg" alt="Sprint Gimnasio" loading="lazy" />
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="assets/galeria/WhatsApp Image 2026-05-15 at 10.48.44 (1).jpeg" alt="Sprint Gimnasio" loading="lazy" />
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="assets/galeria/WhatsApp Image 2026-05-15 at 10.48.46 (2).jpeg" alt="Sprint Gimnasio" loading="lazy" />
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="assets/galeria/WhatsApp Image 2026-05-15 at 10.48.47 (1).jpeg" alt="Sprint Gimnasio" loading="lazy" />
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="assets/galeria/WhatsApp Image 2026-05-15 at 10.48.48 (1).jpeg" alt="Sprint Gimnasio" loading="lazy" />
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="assets/galeria/WhatsApp Image 2026-05-15 at 10.48.50.jpeg" alt="Sprint Gimnasio" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section" id="testimonios">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">LO QUE DICEN LOS SOCIOS</h2>
+        </div>
+
+        <div class="testimonios-grid">
+          <article class="testimonio-card animate-on-scroll">
+            <div class="testimonio-card__stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonio-card__text">
+              "Entrené en muchos lados y en ninguno me atendieron como acá. Los profes te conocen, te miran entrenar, te corrigen. Hace diferencia."
+            </blockquote>
+            <footer class="testimonio-card__author">
+              <strong>Martín G.</strong>
+              <span>Socio hace 4 años</span>
+            </footer>
+          </article>
+
+          <article class="testimonio-card animate-on-scroll">
+            <div class="testimonio-card__stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonio-card__text">
+              "Vine después de una lesión y me armaron una rutina específica. En 6 meses estaba mejor que antes. Volvieron a hacerme entrenar en serio."
+            </blockquote>
+            <footer class="testimonio-card__author">
+              <strong>Carolina M.</strong>
+              <span>Socia hace 2 años</span>
+            </footer>
+          </article>
+
+          <article class="testimonio-card animate-on-scroll">
+            <div class="testimonio-card__stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote class="testimonio-card__text">
+              "Lo que más me gusta es el ambiente. Entrenás al lado de gente común y de deportistas, y a todos los tratan igual. Es raro encontrar eso."
+            </blockquote>
+            <footer class="testimonio-card__author">
+              <strong>Federico L.</strong>
+              <span>Socio hace 6 años</span>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section__header animate-on-scroll">
+          <h2 class="section__title">VENINOS A CONOCER</h2>
+        </div>
+
+        <div class="ubicacion-grid">
+          <div class="ubicacion-info animate-on-scroll">
+            <div class="info-item">
+              <i data-lucide="map-pin"></i>
+              <div>
+                <strong>Dirección</strong>
+                <span>Av. Cabildo 2345, Belgrano, CABA</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i data-lucide="clock"></i>
+              <div>
+                <strong>Horarios</strong>
+                <span>Lun 6:30–23:30 · Mar–Vie 6:30–22:30 · Sáb 9:00–19:00</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i data-lucide="phone"></i>
+              <div>
+                <strong>Teléfono</strong>
+                <span>11 4470-0114</span>
+              </div>
+            </div>
+            <a href="https://maps.google.com" class="btn btn--red ubicacion-info__btn" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+
+          <div class="ubicacion-map animate-on-scroll">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0000000000005!2d-58.4!3d-34.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzAwLjAiUyA1OMKwMjQnMDAuMCJX!5e0!3m2!1ses-419!2sar!4v1234567890"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              title="Ubicación Sprint Gimnasio"
+              aria-label="Mapa de ubicación de Sprint Gimnasio"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+      <div class="cta-final__blob" aria-hidden="true"></div>
+      <div class="container cta-final__content animate-on-scroll">
+        <div class="cta-final__eyebrow">EMPEZÁ HOY</div>
+        <h2 class="cta-final__title">SUMATE AL GIMNASIO.</h2>
+        <p class="cta-final__subtitle">Veníte a conocernos. El equipo te espera.</p>
+        <div class="cta-final__actions">
+          <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--red" target="_blank" rel="noopener">Consultá ahora</a>
+          <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--outline" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 Sprint Gimnasio. Todos los derechos reservados.</p>
+      <nav class="footer__links" aria-label="Links de pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram de Sprint Gimnasio">
+          <i data-lucide="instagram"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook de Sprint Gimnasio">
+          <i data-lucide="facebook"></i>
+        </a>
+        <a href="https://wa.me/5491144700114" target="_blank" rel="noopener" aria-label="WhatsApp de Sprint Gimnasio">
+          <i data-lucide="message-circle"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a
+    href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio"
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+      <path d="M24 4C12.954 4 4 12.954 4 24c0 3.552.924 6.888 2.548 9.774L4 44l10.516-2.752A19.866 19.866 0 0 0 24 44c11.046 0 20-8.954 20-20S35.046 4 24 4zm0 3c9.389 0 17 7.611 17 17S33.389 41 24 41a16.93 16.93 0 0 1-8.62-2.354l-.604-.36-6.27 1.64 1.64-6.09-.392-.628A16.94 16.94 0 0 1 7 24C7 14.611 14.611 7 24 7zm-3.977 8.5c-.434 0-1.137.163-1.732.814-.596.651-2.273 2.22-2.273 5.416 0 3.196 2.328 6.284 2.652 6.72.325.437 4.523 7.148 11.101 9.747 5.505 2.165 6.617 1.735 7.812 1.627 1.193-.108 3.843-1.572 4.385-3.093.543-1.52.543-2.82.38-3.093-.163-.272-.597-.434-1.247-.76-.65-.325-3.843-1.897-4.44-2.112-.596-.218-1.03-.326-1.463.325-.434.65-1.68 2.112-2.059 2.547-.38.434-.76.488-1.41.163-.651-.325-2.738-1.008-5.216-3.22-1.928-1.72-3.23-3.845-3.61-4.496-.38-.65-.04-1.002.285-1.327.292-.292.65-.76.975-1.138.325-.38.433-.65.65-1.082.218-.434.11-.813-.054-1.138-.163-.325-1.447-3.547-2.003-4.848-.54-1.284-1.098-1.082-1.463-1.082-.371 0-.8-.054-1.267-.054z"/>
+    </svg>
+  </a>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
