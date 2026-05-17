@@ -28,7 +28,28 @@
 
       <nav class="navbar__links" id="navLinks" aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown__trigger" aria-expanded="false" aria-haspopup="true">
+            Servicios <i data-lucide="chevron-down" class="nav-dropdown__chevron"></i>
+          </button>
+          <div class="nav-dropdown__menu" role="menu">
+            <a href="musculacion.html" class="nav-dropdown__item" role="menuitem">
+              <i data-lucide="dumbbell"></i> Musculación
+            </a>
+            <a href="pilates-reformer.html" class="nav-dropdown__item" role="menuitem">
+              <i data-lucide="user-check"></i> Pilates Reformer
+            </a>
+            <a href="alto-rendimiento.html" class="nav-dropdown__item" role="menuitem">
+              <i data-lucide="trophy"></i> Alto Rendimiento
+            </a>
+            <a href="aerobico.html" class="nav-dropdown__item" role="menuitem">
+              <i data-lucide="activity"></i> Aeróbico
+            </a>
+            <a href="nutricion.html" class="nav-dropdown__item" role="menuitem">
+              <i data-lucide="apple"></i> Nutrición
+            </a>
+          </div>
+        </div>
         <a href="#horarios">Horarios</a>
         <a href="#galeria">Galería</a>
         <a href="#contacto">Contacto</a>
@@ -49,7 +70,18 @@
     </button>
     <nav class="mobile-menu__links">
       <a href="#inicio" class="mobile-link">Inicio</a>
-      <a href="#servicios" class="mobile-link">Servicios</a>
+      <div class="mobile-services">
+        <button class="mobile-link mobile-services__toggle" aria-expanded="false">
+          Servicios <i data-lucide="chevron-down" class="mobile-services__chevron"></i>
+        </button>
+        <div class="mobile-services__list" aria-hidden="true">
+          <a href="musculacion.html" class="mobile-services__item">Musculación</a>
+          <a href="pilates-reformer.html" class="mobile-services__item">Pilates Reformer</a>
+          <a href="alto-rendimiento.html" class="mobile-services__item">Alto Rendimiento</a>
+          <a href="aerobico.html" class="mobile-services__item">Aeróbico</a>
+          <a href="nutricion.html" class="mobile-services__item">Nutrición</a>
+        </div>
+      </div>
       <a href="#horarios" class="mobile-link">Horarios</a>
       <a href="#galeria" class="mobile-link">Galería</a>
       <a href="#contacto" class="mobile-link">Contacto</a>
@@ -62,11 +94,9 @@
     <!-- HERO -->
     <section class="hero" id="inicio">
 
-      <!-- Fondo: video -->
+      <!-- Fondo: imagen -->
       <div class="hero__img-wrap">
-        <video class="hero__video" autoplay muted loop playsinline>
-          <source src="assets/herovid1.mp4" type="video/mp4" />
-        </video>
+        <img src="assets/herosprint.jpg" alt="Sprint Gimnasio" class="hero__img" />
       </div>
 
       <div class="container hero__inner">

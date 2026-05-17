@@ -104,6 +104,25 @@ const observer = new IntersectionObserver(
 animatedEls.forEach(el => observer.observe(el));
 
 /* =========================================
+   MOBILE SERVICES ACCORDION
+   ========================================= */
+const mobileServicesToggle = document.querySelector('.mobile-services__toggle');
+const mobileServicesList = document.querySelector('.mobile-services__list');
+
+if (mobileServicesToggle && mobileServicesList) {
+  mobileServicesToggle.addEventListener('click', () => {
+    const isOpen = mobileServicesList.classList.contains('is-open');
+    mobileServicesList.classList.toggle('is-open');
+    mobileServicesList.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+    mobileServicesToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+  });
+
+  document.querySelectorAll('.mobile-services__item').forEach(item => {
+    item.addEventListener('click', closeMenu);
+  });
+}
+
+/* =========================================
    SMOOTH SCROLL — ACTIVE NAV LINK
    ========================================= */
 const sections = document.querySelectorAll('section[id]');
