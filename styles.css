@@ -134,6 +134,29 @@ button {
   transform: scale(0.97);
 }
 
+.btn__logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  flex-shrink: 0;
+}
+
+.service-card__logo-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(90%) saturate(700%) hue-rotate(340deg);
+}
+
+.horario-card__logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(90%) saturate(700%) hue-rotate(340deg);
+  flex-shrink: 0;
+}
+
 .btn--red {
   background-color: var(--color-red);
   color: var(--color-text);
@@ -192,6 +215,7 @@ button {
 
 .navbar__links {
   display: none;
+  align-items: center;
   gap: 1.75rem;
   margin-left: auto;
 }
@@ -383,7 +407,6 @@ button {
   overflow: hidden;
 }
 
-/* Imagen de fondo */
 .hero__img-wrap {
   position: absolute;
   inset: 0;
@@ -398,7 +421,6 @@ button {
   object-position: center top;
 }
 
-/* Gradiente oscuro sobre la imagen */
 .hero__img-wrap::after {
   content: '';
   position: absolute;
@@ -473,7 +495,6 @@ button {
   gap: 0.75rem;
 }
 
-/* Stats como pills flotantes a la derecha */
 .hero__stats {
   display: flex;
   flex-direction: column;
@@ -514,7 +535,6 @@ button {
   letter-spacing: 0.01em;
 }
 
-/* Mobile */
 @media (max-width: 720px) {
   .hero {
     min-height: 100svh;
@@ -577,7 +597,6 @@ button {
   }
 }
 
-/* Card principal — portrait, estilo Gemfit */
 .service-card {
   position: relative;
   background-color: #161616;
@@ -592,7 +611,6 @@ button {
   overflow: hidden;
 }
 
-/* Gradiente rojo sutil en la esquina al hacer hover */
 .service-card::before {
   content: '';
   position: absolute;
@@ -613,7 +631,6 @@ button {
   box-shadow: 0 16px 48px rgba(0,0,0,0.4);
 }
 
-/* Número decorativo arriba a la derecha */
 .service-card__num {
   position: absolute;
   top: 1.25rem;
@@ -631,7 +648,6 @@ button {
   color: rgba(220,38,38,0.1);
 }
 
-/* Ícono centrado en círculo */
 .service-card__icon-wrap {
   width: 64px;
   height: 64px;
@@ -674,7 +690,6 @@ button {
   flex: 1;
 }
 
-/* Wrapper de los dos botones CTA */
 .service-card__actions {
   display: flex;
   flex-direction: column;
@@ -697,7 +712,6 @@ button {
   transition: gap 0.25s ease, color 0.25s ease;
 }
 
-/* Segundo botón (Consultá ahora) más sutil */
 .service-card__cta--wa {
   color: var(--color-text-secondary);
 }
@@ -866,6 +880,14 @@ button {
   width: 100%;
 }
 
+.nosotros__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
 .nosotros__placeholder {
   position: relative;
   width: 100%;
@@ -1022,7 +1044,7 @@ button {
   aspect-ratio: 1;
   overflow: hidden;
   transition: border-color var(--transition), transform var(--transition);
-  cursor: default;
+  cursor: zoom-in;
 }
 
 .gallery-item:hover {
@@ -1462,6 +1484,8 @@ button {
    ========================================= */
 .nav-dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .nav-dropdown__trigger {
@@ -1516,21 +1540,29 @@ button {
 
 .nav-dropdown__menu {
   position: absolute;
-  top: calc(100% + 12px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-6px) scale(0.97);
   transform-origin: top center;
-  background-color: #1c1c1c;
-  border: 1px solid rgba(255,255,255,0.1);
+  background-color: transparent;
+  border: none;
   border-radius: var(--radius-md);
-  padding: 0.5rem;
+  padding: 10px 0 0 0;
   min-width: 210px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.18s var(--ease-out), transform 0.18s var(--ease-out), visibility 0.18s;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+  transition: opacity 0.28s var(--ease-out), transform 0.28s var(--ease-out), visibility 0s linear 0.28s;
+  box-shadow: none;
   z-index: 999;
+}
+
+.nav-dropdown__menu-inner {
+  background-color: #1c1c1c;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
 }
 
 .nav-dropdown:hover .nav-dropdown__menu {
@@ -1538,6 +1570,7 @@ button {
   visibility: visible;
   pointer-events: auto;
   transform: translateX(-50%) translateY(0) scale(1);
+  transition: opacity 0.28s var(--ease-out), transform 0.28s var(--ease-out), visibility 0s linear 0s;
 }
 
 .nav-dropdown__item {
@@ -1667,4 +1700,177 @@ button {
   .ticker-track {
     animation: none;
   }
+}
+
+/* =========================================
+   LIGHTBOX
+   ========================================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.92);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  cursor: zoom-out;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+.lightbox__img {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  transform: scale(0.92);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
+  cursor: default;
+}
+
+.lightbox.is-open .lightbox__img {
+  transform: scale(1);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox__close:hover {
+  background: rgba(220, 38, 38, 0.4);
+  transform: scale(1.1);
+}
+
+.lightbox__close svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* ===== GOOGLE REVIEWS ===== */
+.google-reviews-section {
+  overflow: hidden;
+  padding-bottom: 4rem;
+}
+
+.google-reviews-track-wrapper {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.google-reviews-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: scrollReviews 35s linear infinite;
+}
+
+.google-reviews-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollReviews {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.google-review-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.google-review-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.google-review-card__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.google-review-card__avatar-fallback {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #dc2626;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.google-review-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.google-review-card__name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.google-review-card__date {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.google-review-card__logo {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.google-review-card__stars {
+  color: #f59e0b;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.google-review-card__text {
+  font-size: 0.875rem;
+  color: #ccc;
+  line-height: 1.55;
+  margin: 0;
 }

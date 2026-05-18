@@ -1,0 +1,25 @@
+/* TEMA CLARO — preview only. Para activar: descomentar el <link> en index.html */
+:root {
+  --color-bg:             #f5f5f5;
+  --color-surface:        #ffffff;
+  --color-surface-2:      #ebebeb;
+  --color-text:           #111111;
+  --color-text-secondary: rgba(0, 0, 0, 0.6);
+  --color-text-tertiary:  rgba(0, 0, 0, 0.4);
+  --color-border:         rgba(0, 0, 0, 0.12);
+}
+
+/* Navbar */
+.navbar { background-color: #ffffff; box-shadow: 0 1px 8px rgba(0,0,0,0.1); }
+
+/* Mobile menu */
+.mobile-menu { background-color: #ffffff; }
+
+/* Cards de servicios */
+.service-card { background-color: #ffffff; border-color: rgba(0,0,0,0.1); }
+
+/* Footer */
+footer { background-color: #111111; } /* lo dejamos oscuro para contraste */
+
+/* Ticker */
+.ticker { background-color: #e8e8e8; }

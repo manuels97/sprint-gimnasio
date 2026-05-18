@@ -24,7 +24,6 @@ const heroImg = document.querySelector('.hero__img');
 const heroRevealEls = document.querySelectorAll('.hero-reveal');
 
 function triggerHeroReveal() {
-  // navbar
   setTimeout(() => {
     navbar.classList.remove('navbar--hidden');
     navbar.classList.add('navbar--visible');
@@ -145,3 +144,36 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach(section => sectionObserver.observe(section));
+
+/* =========================================
+   GALLERY LIGHTBOX
+   ========================================= */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+
+function openLightbox(src, alt) {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt;
+  lightbox.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.parentElement.addEventListener('click', () => openLightbox(img.src, img.alt));
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});

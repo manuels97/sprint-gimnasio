@@ -7,7 +7,7 @@
   <meta name="description" content="Sprint Gimnasio en Belgrano. Entrenamiento profesional para todos los niveles. Musculación, Pilates Reformer, Alto Rendimiento, Aeróbico y Nutrición." />
   <meta property="og:title" content="Sprint Gimnasio" />
   <meta property="og:description" content="El mejor ambiente. Entrenamiento serio." />
-  <meta property="og:image" content="og-placeholder.jpg" />
+  <meta property="og:image" content="assets/herosprint.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23dc2626'/><text x='50%' y='50%' dominant-baseline='central' text-anchor='middle' font-family='Arial Black' font-size='18' fill='white'>S</text></svg>" />
 
@@ -16,10 +16,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+  <!-- TEMA CLARO: descomentar para previsualizar, comentar para volver al oscuro -->
+  <!-- <link rel="stylesheet" href="theme-light.css" /> -->
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <header class="navbar navbar--hidden" id="navbar">
     <div class="container navbar__inner">
       <a href="#inicio" class="navbar__logo">
@@ -30,9 +31,10 @@
         <a href="#inicio">Inicio</a>
         <div class="nav-dropdown">
           <button class="nav-dropdown__trigger" aria-expanded="false" aria-haspopup="true">
-            Servicios <i data-lucide="chevron-down" class="nav-dropdown__chevron"></i>
+            Actividades <i data-lucide="chevron-down" class="nav-dropdown__chevron"></i>
           </button>
           <div class="nav-dropdown__menu" role="menu">
+            <div class="nav-dropdown__menu-inner">
             <a href="musculacion.html" class="nav-dropdown__item" role="menuitem">
               <i data-lucide="dumbbell"></i> Musculación
             </a>
@@ -48,6 +50,7 @@
             <a href="nutricion.html" class="nav-dropdown__item" role="menuitem">
               <i data-lucide="apple"></i> Nutrición
             </a>
+            </div>
           </div>
         </div>
         <a href="#horarios">Horarios</a>
@@ -55,7 +58,7 @@
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--red navbar__cta navbar__cta--pulse" target="_blank" rel="noopener">Consultá ahora</a>
+      <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--red navbar__cta navbar__cta--pulse" target="_blank" rel="noopener">Consultá ahora<img src="assets/solobrazo.png" alt="" class="btn__logo" /></a>
 
       <button class="navbar__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -63,7 +66,6 @@
     </div>
   </header>
 
-  <!-- MOBILE MENU OVERLAY -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <button class="mobile-menu__close" id="menuClose" aria-label="Cerrar menú">
       <i data-lucide="x"></i>
@@ -72,7 +74,7 @@
       <a href="#inicio" class="mobile-link">Inicio</a>
       <div class="mobile-services">
         <button class="mobile-link mobile-services__toggle" aria-expanded="false">
-          Servicios <i data-lucide="chevron-down" class="mobile-services__chevron"></i>
+          Actividades <i data-lucide="chevron-down" class="mobile-services__chevron"></i>
         </button>
         <div class="mobile-services__list" aria-hidden="true">
           <a href="musculacion.html" class="mobile-services__item">Musculación</a>
@@ -91,32 +93,27 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero" id="inicio">
-
-      <!-- Fondo: imagen -->
       <div class="hero__img-wrap">
         <img src="assets/herosprint.jpg" alt="Sprint Gimnasio" class="hero__img" />
       </div>
 
       <div class="container hero__inner">
 
-        <!-- LEFT: texto -->
         <div class="hero__left">
-          <div class="hero__badge hero-reveal" style="--delay:0.75s">GIMNASIO SPRINT</div>
+          <div class="hero__badge hero-reveal" style="--delay:0.75s">ABIERTO DE LUNES A SABADO</div>
           <h1 class="hero__title hero-reveal" style="--delay:1s">
             EL MEJOR AMBIENTE.<br />ENTRENAMIENTO SERIO.
           </h1>
           <p class="hero__subtitle hero-reveal" style="--delay:0.65s">
-            Un equipo profesional que entrena deportistas de alto rendimiento, y te atiende como a uno más. Desde el primer día.
+            Un equipo profesional que te entrena según tus objetivos con espacio amplio y equipado, y una comunidad que te va a hacer sentir como en casa. Vení a conocernos.
           </p>
           <div class="hero__actions hero-reveal" style="--delay:0.8s">
-            <a href="#servicios" class="btn btn--red">Conocé el gym</a>
+            <a href="#servicios" class="btn btn--red">Conocenos</a>
             <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--outline" target="_blank" rel="noopener">Hablar por WhatsApp</a>
           </div>
         </div>
 
-        <!-- RIGHT: stats flotantes -->
         <div class="hero__right hero-reveal" style="--delay:0.95s">
           <div class="hero__stats">
             <div class="stat stat--location">
@@ -136,7 +133,6 @@
       </div>
     </section>
 
-    <!-- TICKER BAND -->
     <div class="ticker-band" aria-hidden="true">
       <div class="ticker-track">
         <div class="ticker-item">
@@ -187,12 +183,11 @@
       </div>
     </div>
 
-    <!-- SERVICIOS -->
     <section class="section services-section" id="servicios">
       <div class="container">
         <div class="section__header animate-on-scroll">
           <p class="services-section__eyebrow">LO QUE OFRECEMOS</p>
-          <h2 class="section__title">NUESTROS SERVICIOS</h2>
+          <h2 class="section__title">NUESTRAS ACTIVIDADES</h2>
         </div>
 
         <div class="services-grid">
@@ -200,7 +195,7 @@
           <div class="service-card animate-on-scroll">
             <span class="service-card__num">01</span>
             <div class="service-card__icon-wrap">
-              <i data-lucide="dumbbell"></i>
+              <img src="assets/solobrazo.png" alt="Musculación" class="service-card__logo-img" />
             </div>
             <h3 class="service-card__title">Musculación</h3>
             <p class="service-card__desc">Equipamiento profesional y rutinas armadas a tu nivel para alcanzar tus objetivos.</p>
@@ -286,7 +281,6 @@
       </div>
     </section>
 
-    <!-- NOSOTROS -->
     <section class="section nosotros" id="nosotros">
       <div class="container nosotros__inner">
         <div class="nosotros__text animate-on-scroll">
@@ -295,16 +289,12 @@
             En Sprint Gimnasio entrena gente de todos los niveles, con objetivos muy distintos. Lo que nos hace diferentes es la atención: un equipo de profesores que se forma constantemente, que conoce a cada socio por su nombre, y que se toma en serio tanto al que recién empieza como al que entrena para competir. Acá no hay clientes de paso. Hay gente que entrena, y comunidad que vuelve.
           </p>
         </div>
-        <div class="nosotros__media animate-on-scroll" aria-hidden="true">
-          <div class="nosotros__placeholder">
-            <span class="nosotros__word">SPRINT</span>
-            <div class="nosotros__overlay"></div>
-          </div>
+        <div class="nosotros__media animate-on-scroll">
+          <img src="assets/galeria/WhatsApp Image 2026-05-15 at 10.48.48 (1).jpeg" alt="Sprint Gimnasio" class="nosotros__img" />
         </div>
       </div>
     </section>
 
-    <!-- HORARIOS -->
     <section class="section" id="horarios">
       <div class="container">
         <div class="section__header animate-on-scroll">
@@ -315,21 +305,21 @@
         <div class="horarios-3-grid animate-on-scroll">
           <div class="horario-3-card">
             <div class="horario-3-card__day">
-              <i data-lucide="calendar"></i>
+              <img src="assets/solobrazo.png" alt="" class="horario-card__logo" />
               <span>Lunes</span>
             </div>
             <div class="horario-3-card__time">6:30 — 23:30</div>
           </div>
           <div class="horario-3-card">
             <div class="horario-3-card__day">
-              <i data-lucide="calendar"></i>
+              <img src="assets/solobrazo.png" alt="" class="horario-card__logo" />
               <span>Martes a Viernes</span>
             </div>
             <div class="horario-3-card__time">6:30 — 22:30</div>
           </div>
           <div class="horario-3-card">
             <div class="horario-3-card__day">
-              <i data-lucide="calendar"></i>
+              <img src="assets/solobrazo.png" alt="" class="horario-card__logo" />
               <span>Sábados</span>
             </div>
             <div class="horario-3-card__time">9:00 — 19:00</div>
@@ -338,7 +328,6 @@
       </div>
     </section>
 
-    <!-- GALERÍA -->
     <section class="section" id="galeria">
       <div class="container">
         <div class="section__header animate-on-scroll">
@@ -369,51 +358,140 @@
       </div>
     </section>
 
-    <!-- TESTIMONIOS -->
-    <section class="section" id="testimonios">
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    </div>
+
+    <section class="section google-reviews-section" id="testimonios">
       <div class="container">
         <div class="section__header animate-on-scroll">
           <h2 class="section__title">LO QUE DICEN LOS SOCIOS</h2>
         </div>
+      </div>
 
-        <div class="testimonios-grid">
-          <article class="testimonio-card animate-on-scroll">
-            <div class="testimonio-card__stars" aria-label="5 estrellas">★★★★★</div>
-            <blockquote class="testimonio-card__text">
-              "Entrené en muchos lados y en ninguno me atendieron como acá. Los profes te conocen, te miran entrenar, te corrigen. Hace diferencia."
-            </blockquote>
-            <footer class="testimonio-card__author">
-              <strong>Martín G.</strong>
-              <span>Socio hace 4 años</span>
-            </footer>
-          </article>
+      <div class="google-reviews-track-wrapper">
+        <div class="google-reviews-track">
 
-          <article class="testimonio-card animate-on-scroll">
-            <div class="testimonio-card__stars" aria-label="5 estrellas">★★★★★</div>
-            <blockquote class="testimonio-card__text">
-              "Vine después de una lesión y me armaron una rutina específica. En 6 meses estaba mejor que antes. Volvieron a hacerme entrenar en serio."
-            </blockquote>
-            <footer class="testimonio-card__author">
-              <strong>Carolina M.</strong>
-              <span>Socia hace 2 años</span>
-            </footer>
-          </article>
+          <div class="google-review-card">
+            <div class="google-review-card__header">
+              <img class="google-review-card__avatar" src="https://lh3.googleusercontent.com/a/ACg8ocIp7rGCxA2XaFK6mrqBVXqmqyNGdOTdnnz6HgMK9tGq9A=s40-c" alt="Maria Cadavid" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="google-review-card__avatar-fallback" style="display:none">MC</div>
+              <div class="google-review-card__info">
+                <span class="google-review-card__name">Maria Cadavid</span>
+                <span class="google-review-card__date">Hace 3 meses</span>
+              </div>
+              <svg class="google-review-card__logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="google-review-card__stars">★★★★★</div>
+            <p class="google-review-card__text">Muy conforme con el servicio que ofrecen, tanto el equipamiento como el personal. Siempre atentos a las necesidades del cliente. Sin dudas un espacio super cálido para entrenar. Muchas gracias!</p>
+          </div>
 
-          <article class="testimonio-card animate-on-scroll">
-            <div class="testimonio-card__stars" aria-label="5 estrellas">★★★★★</div>
-            <blockquote class="testimonio-card__text">
-              "Lo que más me gusta es el ambiente. Entrenás al lado de gente común y de deportistas, y a todos los tratan igual. Es raro encontrar eso."
-            </blockquote>
-            <footer class="testimonio-card__author">
-              <strong>Federico L.</strong>
-              <span>Socio hace 6 años</span>
-            </footer>
-          </article>
+          <div class="google-review-card">
+            <div class="google-review-card__header">
+              <img class="google-review-card__avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLw2vqJtMnVGfWLKPvhFV-FYuCJZ4TBkRnqIi5sZX9l=s40-c" alt="Juan Manuel Vazquez" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="google-review-card__avatar-fallback" style="display:none">JV</div>
+              <div class="google-review-card__info">
+                <span class="google-review-card__name">Juan Manuel Vazquez</span>
+                <span class="google-review-card__date">Hace 3 años</span>
+              </div>
+              <svg class="google-review-card__logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="google-review-card__stars">★★★★★</div>
+            <p class="google-review-card__text">Arrancamos hace 2 meses con mi novia, Eduardo nos viene armando las planificaciones, la verdad excelente profe y persona, un lujo.</p>
+          </div>
+
+          <div class="google-review-card">
+            <div class="google-review-card__header">
+              <img class="google-review-card__avatar" src="https://lh3.googleusercontent.com/a/ACg8ocKPQ1j5yRjmLNl8rK2jKvMNIBJ_JeNJZ0VnA3Ke=s40-c" alt="Maria Laura Bafile" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="google-review-card__avatar-fallback" style="display:none">MB</div>
+              <div class="google-review-card__info">
+                <span class="google-review-card__name">Maria Laura Bafile</span>
+                <span class="google-review-card__date">Hace 2 años</span>
+              </div>
+              <svg class="google-review-card__logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="google-review-card__stars">★★★★★</div>
+            <p class="google-review-card__text">Me gustó el lugar y la calidez de la gente. Me sirvió para mantener mi rutina durante el viaje. Me hicieron todo muy fácil, aún y cuando fuera sólo por tres semanas. Gracias!!</p>
+          </div>
+
+          <div class="google-review-card">
+            <div class="google-review-card__header">
+              <img class="google-review-card__avatar" src="https://lh3.googleusercontent.com/a/ACg8ocIwjZ9bGdXkFmLRbJkRe9Pb5JvVx6e8GxkYk1uQ=s40-c" alt="Eduardo Duarte" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="google-review-card__avatar-fallback" style="display:none">ED</div>
+              <div class="google-review-card__info">
+                <span class="google-review-card__name">Eduardo Duarte</span>
+                <span class="google-review-card__date">Hace 2 años</span>
+              </div>
+              <svg class="google-review-card__logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="google-review-card__stars">★★★★★</div>
+            <p class="google-review-card__text">Muy confortable y buen ambiente para entrenar. También te dejan trabajar con los personalizados y eso hoy es muy destacable para un gym. Gracias y sigan así.</p>
+          </div>
+
+          <div class="google-review-card">
+            <div class="google-review-card__header">
+              <img class="google-review-card__avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLzBXPOovCZhqNNM2NRXCeLMijPUazmMILs7lXA=s40-c" alt="Carlos Hugo Matilla" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="google-review-card__avatar-fallback" style="display:none">CM</div>
+              <div class="google-review-card__info">
+                <span class="google-review-card__name">Carlos Hugo Matilla</span>
+                <span class="google-review-card__date">Hace 2 años</span>
+              </div>
+              <svg class="google-review-card__logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="google-review-card__stars">★★★★★</div>
+            <p class="google-review-card__text">Excelente gimnasio, no solo por lo específico, sino que están encima de uno los profesores. Muy buen equipamiento.</p>
+          </div>
+
+          <!-- Duplicados para loop infinito -->
+          <div class="google-review-card">
+            <div class="google-review-card__header">
+              <img class="google-review-card__avatar" src="https://lh3.googleusercontent.com/a/ACg8ocIp7rGCxA2XaFK6mrqBVXqmqyNGdOTdnnz6HgMK9tGq9A=s40-c" alt="Maria Cadavid" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="google-review-card__avatar-fallback" style="display:none">MC</div>
+              <div class="google-review-card__info">
+                <span class="google-review-card__name">Maria Cadavid</span>
+                <span class="google-review-card__date">Hace 3 meses</span>
+              </div>
+              <svg class="google-review-card__logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="google-review-card__stars">★★★★★</div>
+            <p class="google-review-card__text">Muy conforme con el servicio que ofrecen, tanto el equipamiento como el personal. Siempre atentos a las necesidades del cliente. Sin dudas un espacio super cálido para entrenar. Muchas gracias!</p>
+          </div>
+
+          <div class="google-review-card">
+            <div class="google-review-card__header">
+              <img class="google-review-card__avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLw2vqJtMnVGfWLKPvhFV-FYuCJZ4TBkRnqIi5sZX9l=s40-c" alt="Juan Manuel Vazquez" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="google-review-card__avatar-fallback" style="display:none">JV</div>
+              <div class="google-review-card__info">
+                <span class="google-review-card__name">Juan Manuel Vazquez</span>
+                <span class="google-review-card__date">Hace 3 años</span>
+              </div>
+              <svg class="google-review-card__logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="google-review-card__stars">★★★★★</div>
+            <p class="google-review-card__text">Arrancamos hace 2 meses con mi novia, Eduardo nos viene armando las planificaciones, la verdad excelente profe y persona, un lujo.</p>
+          </div>
+
+          <div class="google-review-card">
+            <div class="google-review-card__header">
+              <img class="google-review-card__avatar" src="https://lh3.googleusercontent.com/a/ACg8ocKPQ1j5yRjmLNl8rK2jKvMNIBJ_JeNJZ0VnA3Ke=s40-c" alt="Maria Laura Bafile" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="google-review-card__avatar-fallback" style="display:none">MB</div>
+              <div class="google-review-card__info">
+                <span class="google-review-card__name">Maria Laura Bafile</span>
+                <span class="google-review-card__date">Hace 2 años</span>
+              </div>
+              <svg class="google-review-card__logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </div>
+            <div class="google-review-card__stars">★★★★★</div>
+            <p class="google-review-card__text">Me gustó el lugar y la calidez de la gente. Me sirvió para mantener mi rutina durante el viaje. Me hicieron todo muy fácil, aún y cuando fuera sólo por tres semanas. Gracias!!</p>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- UBICACIÓN -->
     <section class="section" id="contacto">
       <div class="container">
         <div class="section__header animate-on-scroll">
@@ -463,7 +541,6 @@
       </div>
     </section>
 
-    <!-- CTA FINAL -->
     <section class="cta-final">
       <div class="cta-final__blob" aria-hidden="true"></div>
       <div class="container cta-final__content animate-on-scroll">
@@ -471,7 +548,7 @@
         <h2 class="cta-final__title">SUMATE AL GIMNASIO.</h2>
         <p class="cta-final__subtitle">Veníte a conocernos. El equipo te espera.</p>
         <div class="cta-final__actions">
-          <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--red" target="_blank" rel="noopener">Consultá ahora</a>
+          <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--red" target="_blank" rel="noopener">Consultá ahora<img src="assets/solobrazo.png" alt="" class="btn__logo" /></a>
           <a href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio" class="btn btn--outline" target="_blank" rel="noopener">Hablar por WhatsApp</a>
         </div>
       </div>
@@ -479,13 +556,12 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">© 2026 Sprint Gimnasio. Todos los derechos reservados.</p>
       <nav class="footer__links" aria-label="Links de pie de página">
         <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
+        <a href="#servicios">Actividades</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="footer__social">
@@ -502,7 +578,6 @@
     </div>
   </footer>
 
-  <!-- WHATSAPP FLOTANTE -->
   <a
     href="https://wa.me/5491144700114?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sprint%20Gimnasio"
     class="whatsapp-fab"
@@ -510,9 +585,7 @@
     rel="noopener"
     aria-label="Contactar por WhatsApp"
   >
-    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#fff">
-      <path d="M24 4C12.954 4 4 12.954 4 24c0 3.552.924 6.888 2.548 9.774L4 44l10.516-2.752A19.866 19.866 0 0 0 24 44c11.046 0 20-8.954 20-20S35.046 4 24 4zm0 3c9.389 0 17 7.611 17 17S33.389 41 24 41a16.93 16.93 0 0 1-8.62-2.354l-.604-.36-6.27 1.64 1.64-6.09-.392-.628A16.94 16.94 0 0 1 7 24C7 14.611 14.611 7 24 7zm-3.977 8.5c-.434 0-1.137.163-1.732.814-.596.651-2.273 2.22-2.273 5.416 0 3.196 2.328 6.284 2.652 6.72.325.437 4.523 7.148 11.101 9.747 5.505 2.165 6.617 1.735 7.812 1.627 1.193-.108 3.843-1.572 4.385-3.093.543-1.52.543-2.82.38-3.093-.163-.272-.597-.434-1.247-.76-.65-.325-3.843-1.897-4.44-2.112-.596-.218-1.03-.326-1.463.325-.434.65-1.68 2.112-2.059 2.547-.38.434-.76.488-1.41.163-.651-.325-2.738-1.008-5.216-3.22-1.928-1.72-3.23-3.845-3.61-4.496-.38-.65-.04-1.002.285-1.327.292-.292.65-.76.975-1.138.325-.38.433-.65.65-1.082.218-.434.11-.813-.054-1.138-.163-.325-1.447-3.547-2.003-4.848-.54-1.284-1.098-1.082-1.463-1.082-.371 0-.8-.054-1.267-.054z"/>
-    </svg>
+    <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
   <script src="https://unpkg.com/lucide@latest"></script>
