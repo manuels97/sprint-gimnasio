@@ -48,3 +48,12 @@ scratchpad/
 wip/
 planning/
 notes/
+
+# Herramientas de desarrollo local
+kit-auditoria-seo/
+.claude/
+package.json
+package-lock.json
+
+# Assets no publicables
+assets/apoderamiento.pdf

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sprintgimnasio.com.ar/sitemap.xml
